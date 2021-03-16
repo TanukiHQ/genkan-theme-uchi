@@ -20,7 +20,6 @@ Remember to set the name of the theme in the `config.json`.
 ```json
 "genkan": {
     "theme": "genkan-theme-uchi",
-    ...
 }
 ```
 ### Dependencies
