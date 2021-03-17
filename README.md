@@ -19,7 +19,7 @@ npm install genkan-theme-uchi
 Remember to set the name of the theme in the `config.json`.
 ```json
 "genkan": {
-    "theme": "genkan-theme-uchi",
+    "theme": "uchi",
 }
 ```
 ### Dependencies
