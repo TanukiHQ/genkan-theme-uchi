@@ -10,7 +10,8 @@ Alternatively, you can fork or download instead.
 This is a theme for Genkan and in order for this to work, you will need Genkan (duh...). You may grab yourself a copy of Genkan at https://github.com/HakkouHQ/Genkan.
 
 ### Installation
-> **Before proceeding...** This theme comes pre-installed with every installation of Genkan. > However, if for some reason your Genkan didn't come with Uchi, you may use the follow instructions to install Uchi.
+> **Before proceeding...** This theme comes pre-installed with every installation of Genkan. 
+> However, if for some reason your Genkan didn't come with Uchi, you may use the follow instructions to install Uchi.
 
 To install this theme, perform the following command at the root of the root directory of the Genkan instance.
 ```
