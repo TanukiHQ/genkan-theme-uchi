@@ -22,7 +22,7 @@
             integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
             crossorigin="anonymous"></script>
 
-    <script src="../../vendor/genkan/passwordStrength.js"></script>
+    <script src="../../vendor/genkan/fieldChecker.js"></script>
 
     <!-- Google Recaptcha V3-->
     <!--<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>-->
@@ -41,6 +41,13 @@
             {{{body}}}
         </div>
     </section>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('SITE_KEY', { action: 'submit' }).then(function (token) {
+                document.getElementById("g-recaptcha-response").value = token;
+            });
+        });
+    </script>
 </body>
 
 </html>
