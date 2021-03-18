@@ -9,7 +9,7 @@
     <form method="POST">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input name="email" class="input" type="text" placeholder="Email">
+                <input name="email" class="input" type="email" placeholder="Email" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                 </span>
@@ -17,7 +17,7 @@
         </div>
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input name="password" class="input" type="password" placeholder="Password">
+                <input name="password" class="input" type="password" placeholder="Password" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-key"></i>
                 </span>
@@ -27,6 +27,18 @@
         <div id="loginButton" class="buttons has-addons level-right">
             <button class="button is-primary is-fullwidth">Login&ensp;<i class="fas fa-arrow-right"></i></button>
         </div>
+        <a class="button is-fullwidth" style="margin-bottom:15px;" href="/google">
+            <span class="icon is-small">
+                <i class="fab fa-google"></i>
+            </span>
+            <span>Sign In with Google</span>
+        </a>
+        <!--<a class="button is-fullwidth" href="#" style="display:none;">
+            <span class="icon is-small">
+                <i class="fab fa-facebook"></i>
+            </span>
+            <span>Login with Facebook</span>
+        </a>-->
     </form>
     <hr>
     <div class="has-text-centered">
@@ -68,11 +80,3 @@
     <h2 class="title is-3 has-text-centered">Verifying</h2>
     <p class="subtitle is-5 has-text-centered">Please wait</p>
 </div>
-
-<script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute('SITE_KEY', { action: 'submit' }).then(function (token) {
-            document.getElementById("g-recaptcha-response").value = token;
-        });
-    });
-</script>
