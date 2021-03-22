@@ -1,14 +1,10 @@
 <div id="register">
     <h4 class="subtitle is-6 has-text-centered has-text-weight-bold">Register a new account</h4>
-    <div id="emailNotValid" class="notification is-danger" style="display: none;">
-        Email address doesn't seem to be valid.
+    {{#if result.errDuplicateEmail}}
+    <div id="emailDuplicate" class="notification is-danger">
+        An account with this Email address already exists.
     </div>
-    <div id="passwordNotValid" class="notification is-danger" style="display: none;">
-        Password should consist of 8 or more characters.
-    </div>
-    <div id="emailDuplicate" class="notification is-danger" style="display: none;">
-        Email is already attached to an existing account.
-    </div>
+    {{/if}}
     <form method="POST">
         <div class="field">
             <div class="control has-icons-left has-icons-right">

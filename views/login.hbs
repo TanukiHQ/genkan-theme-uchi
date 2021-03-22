@@ -3,9 +3,11 @@
     <div id="emailConfirmed" class="notification is-success" style="display: none;">
         Your email has been verified.
     </div>
-    <div id="badLogin" class="notification is-danger" style="display: none;">
-        Email or password is invalid.
+    {{#if result.errCredentialsInvalid}}
+    <div id="badLogin" class="notification is-danger">
+        Email or password is incorrect.
     </div>
+    {{/if}}
     <form method="POST">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
