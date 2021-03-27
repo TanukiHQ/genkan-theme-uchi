@@ -13,6 +13,10 @@ $('#showPassword').on('mousedown taphold', function () {
     $("#showPasswordText").text("Hold to show password")
 })
 
+// We use Regex for validating input
+// Visit the link below for documentation related to regex
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
+
 ValidatePassword = () => {
     var str = $('#newPassword').val(); 
     if (str.length <= 0) {
@@ -52,22 +56,33 @@ ValidatePassword = () => {
         $("#passwordMessage").addClass("is-success");
         $("#registerButton").prop("disabled", false);
     }
-    //If want to add another password field
-    //Uncomment codes below and modify it
-    //else {
-    //    if (str != str2) {
-    //        document.getElementById('<%=firstPasswordError.ClientID%>').innerHTML = "Excellent";
-    //        document.getElementById('<%=firstPasswordError.ClientID%>').style.color = "Green";
-    //        document.getElementById('<%=secondPasswordError.ClientID%>').innerHTML = "Ensure that both passwords are the same";
-    //        document.getElementById('<%=secondPasswordError.ClientID%>').style.color = "Red";
-    //        document.getElementById('<%=submitBtn.ClientID%>').disabled = true;
-    //    }
-    //    else {
-    //        document.getElementById('<%=firstPasswordError.ClientID%>').innerHTML = "Excellent";
-    //        document.getElementById('<%=firstPasswordError.ClientID%>').style.color = "Green";
-    //        document.getElementById('<%=secondPasswordError.ClientID%>').innerHTML = "Excellent";
-    //        document.getElementById('<%=secondPasswordError.ClientID%>').style.color = "Green";
-    //        document.getElementById('<%=submitBtn.ClientID%>').disabled = false;
-    //    }
-    //}
+}
+
+ValidatePhoneNumber = () => {
+    var str = $('#phoneNumberInput').val(); 
+    if (str.length <= 0) {
+        $("#phoneMessage").css("visibility", "visible");
+        $("#phoneMessage").text("Please enter your phone number");
+        $("#phoneMessage").addClass("is-danger");
+        $("#submitButton").prop("disabled", true);
+    }
+    else if (str.length > 8) {
+        $("#phoneMessage").css("visibility", "visible");
+        $("#phoneMessage").text("Phone number should only contain 8-digits");
+        $("#phoneMessage").addClass("is-danger");
+        $("#submitButton").prop("disabled", true);
+    }
+    else if(str.search(/^[0-9]*$/) == -1){
+        $("#phoneMessage").css("visibility", "visible");
+        $("#phoneMessage").text("Please enter a valid phone number without any spacing or dashes");
+        $("#phoneMessage").addClass("is-danger");
+        $("#submitButton").prop("disabled", true);
+    }
+    else {
+        $("#phoneMessage").css("visibility", "visible");
+        $("#phoneMessage").text("Looks Good!");
+        $("#phoneMessage").removeClass("is-danger");
+        $("#phoneMessage").addClass("is-success");
+        $("#submitButton").prop("disabled", false);
+    }
 }
