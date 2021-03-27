@@ -1,0 +1,10 @@
+{
+    "name":"玄関 Genkan",
+    "short_name": "玄関 Genkan",
+    "description": "Seamless authentication system using NodeJS and MongoDB",
+    "start_url":"/login",
+    "display":"browser",
+    "background_color":"#ffffff",
+    "theme_color": "#ffffff",
+    "icons":[]
+}
