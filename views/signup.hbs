@@ -1,10 +1,10 @@
 <div id="register">
     <h4 class="subtitle is-6 has-text-centered has-text-weight-bold">Register a new account</h4>
-    {{#if result.errDuplicateEmail}}
+    {{#ifEquals notifs "ERR_DUP_EMAIL"}}
     <div id="emailDuplicate" class="notification is-danger">
         An account with this Email address already exists.
     </div>
-    {{/if}}
+    {{/ifEquals}}
     <form method="POST">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
