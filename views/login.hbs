@@ -1,13 +1,25 @@
 <div id="login">
     <h4 class="subtitle is-6 has-text-centered has-text-weight-bold">Login to your account to continue</h4>
     {{#ifEquals notifs "OK_EMAIL_CONFIRMED"}}
-    <div id="emailConfirmed" class="notification is-success" style="display: none;">
+    <div id="emailConfirmed" class="notification is-success">
         Your email has been verified.
+    </div>
+    {{/ifEquals}}
+    {{#ifEquals notifs "OK_PWD_RESET"}}
+    <div class="notification is-success">
+        You may now login with your new password.
     </div>
     {{/ifEquals}}
     {{#ifEquals notifs "ERR_CREDS_INVALID"}}
     <div id="badLogin" class="notification is-danger">
         Email or password is incorrect.
+    </div>
+    {{/ifEquals}}
+    {{#ifEquals notifs "ERR_TOKEN_INVALID"}}
+    <div id="badLogin" class="notification is-danger">
+        Password reset link is either invalid or expired.
+        <br>
+        Please request for a new one.
     </div>
     {{/ifEquals}}
     <form method="POST">
@@ -52,7 +64,7 @@
                 up
             </a>
             <span class="unselectable">&ensp;&bull;&ensp;</span>
-            <a class="has-text-primary" data-pjax='main' href="./resetpassword">
+            <a class="has-text-primary" data-pjax='main' href="./recover">
                 <i class="fas fa-question-circle"></i>&ensp;Trouble logging in?
             </a>
         </span>
