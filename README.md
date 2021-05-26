@@ -1,5 +1,5 @@
 # Uchi 家
-Default theme for [Genkan](https://github.com/HakkouHQ/Genkan), forked from Nichijou.
+Default theme for [Genkan](https://github.com/TanukiHQ/Genkan), forked from Nichijou.
 
 ## Use as a template
 You can use this repository as the base of a brand new theme you wish to create. See that shiny green button labeled, "Use this template"? Click that and you're good to go!
@@ -7,7 +7,7 @@ You can use this repository as the base of a brand new theme you wish to create.
 Alternatively, you can fork or download instead.
 
 ## Genkan 
-This is a theme for Genkan and in order for this to work, you will need Genkan (duh...). You may grab yourself a copy of Genkan at https://github.com/HakkouHQ/Genkan.
+This is a theme for Genkan and in order for this to work, you will need Genkan (duh...). You may grab yourself a copy of Genkan at https://github.com/TanukiHQ/Genkan.
 
 ### Installation
 > **Before proceeding...** This theme comes pre-installed with every installation of Genkan. 
