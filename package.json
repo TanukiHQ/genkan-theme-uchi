@@ -1,10 +1,10 @@
 {
   "name": "genkan-theme-uchi",
-  "version": "1.0.2-3",
+  "version": "1.0.3",
   "description": "Default theme for Genkan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HakkouHQ/Uchi.git"
+    "url": "git+https://github.com/TanukiHQ/Uchi.git"
   },
   "keywords": [
     "genkan",
@@ -14,7 +14,7 @@
   "author": "HakkouApp",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/HakkouHQ/Uchi/issues"
+    "url": "https://github.com/TanukiHQ/Uchi/issues"
   },
-  "homepage": "https://github.com/HakkouHQ/Uchi#readme"
+  "homepage": "https://github.com/TanukiHQ/Uchi#readme"
 }
