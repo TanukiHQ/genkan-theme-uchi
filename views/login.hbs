@@ -22,6 +22,11 @@
         Please request for a new one.
     </div>
     {{/ifEquals}}
+    {{#ifEquals notifs "ERR_ALREADY_LOGGEDOUT"}}
+    <div id="badLogin" class="notification is-danger">
+        Already logged out.
+    </div>
+    {{/ifEquals}}
     <form method="POST">
         <input type="hidden" name="_csrf" value="{{csrfToken}}">
         <div class="field">
